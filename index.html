@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links para fontes externas usadas na página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="./styles/_reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    
+    <title>Projeto E-Ticket - Jose Jhonata</title>
+</head>
+<body>
+    <!-- Cabeçalho da página contendo o logotipo -->
+    <header>
+        <img class="logo" src="./assets/PNG/Logo e-tricket.png" alt="Logo">
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="container">
+
+        <!-- Elemento decorativo (grafismo) -->
+        <div class="grafismo"></div>
+
+        <!-- Título principal com destaque na palavra "ingresso" -->
+        <h1>Compre seu <span>ingresso</span></h1>
+
+        <!-- Formulário para selecionar o tipo de ingresso e quantidade -->
+        <form action="">
+            
+            <!-- Campo de seleção para o tipo de ingresso -->
+            <label class="input-group">
+                Escolha o tipo
+                <select name="tipo-ingresso" id="tipo-ingresso">
+                    <!-- Opção vazia para validação -->
+                    <option value=""></option>
+                    <!-- Opções de tipos de ingresso -->
+                    <option value="inferior">Cadeira inferior</option>
+                    <option value="superior">Cadeira superior</option>
+                    <option value="pista">Pista</option>
+                </select>
+            </label>
+
+            <!-- Campo de entrada para informar a quantidade de ingressos -->
+            <label class="input-group">
+                Qtde.
+                <input type="number" id="qtd" placeholder="00" min="1" max="10">
+            </label>
+
+            <!-- Botão para efetuar a compra, chama a função 'comprar' no clique -->
+            <button onclick="comprar()" type="button">Comprar</button>
+        </form>
+
+        <!-- Imagem decorativa (hachuras) -->
+        <img class="hachuras" src="./assets/SVG/Hachuras.svg" alt="">
+
+        <!-- Seção que exibe a quantidade disponível de cada tipo de ingresso -->
+        <section>
+            <h2>Quantidade disponível</h2>
+
+            <!-- Lista com as quantidades disponíveis de ingressos por tipo -->
+            <ul class="lista">
+                <!-- Quantidade disponível para pista -->
+                <li>Pista<span id="qtd-pista">100</span></li>
+                <!-- Quantidade disponível para cadeira superior -->
+                <li>Cadeira superior<span id="qtd-superior">200</span></li>
+                <!-- Quantidade disponível para cadeira inferior -->
+                <li>Cadeira inferior<span id="qtd-inferior">400</span></li>
+            </ul>
+
+            <!-- Imagem ilustrativa de ingresso -->
+            <img src="./assets/Ingresso.svg" alt="">
+        </section>
+    </main>
+
+    <!-- Inclusão do arquivo JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
